@@ -4,12 +4,12 @@ const overlay = document.getElementById('overlay');
 const overlayImage = document.getElementById('overlayImage');
 
 qrCodeDisplay.addEventListener('click', () => {
-    overlay.style.display = 'flex'; // Overlay anzeigen
-    overlayImage.src = qrCodeDisplay.src; // Das vergrößerte Bild setzen
+    overlay.style.display = 'flex'; // Show overlay
+    overlayImage.src = qrCodeDisplay.src; // Set scaled image
 });
 
 overlay.addEventListener('click', () => {
-    overlay.style.display = 'none'; // Overlay verbergen
+    overlay.style.display = 'none'; // Hide overlay
 });
 
 
