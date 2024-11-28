@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>WLAN Voucher</title>
+</head>
+<body>
+    <img id="logo" alt="Mexterng" src="{{ url_for('static', filename='logo_small.png') }}">
+    <header>
+        <h1>WLAN Voucher Generator</h1>
+        <h2>meyer technology engineer next generation</h2>
+    </header>
+    <main>
+        <button class="generateButton" duration="100min">100min Code generieren</button>
+        <button class="generateButton" duration="8h">8h Code generieren</button>
+        <p id="help"></p>
+        <p id="keyDisplay"></p>
+        <img id="qrCodeDisplay" alt="QR Code" style="display:none;">
+    </main>
+    <div id="overlay" class="overlay">
+        <img id="overlayImage" src="" alt="Vergrößerter QR Code">
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
