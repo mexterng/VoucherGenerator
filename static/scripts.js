@@ -35,7 +35,7 @@ fetch("/generate_code", {
     .then(response => response.json())
     .then(data => {
         if (!data.error) {
-            document.getElementById("help").innerText = "1. Im WLAN 'Schüler' mit Zugangsdaten aus IT-Raum anmelden.\n2. QR-Code scannen/Code eingeben.\n3. Login klicken."
+            document.getElementById("help").innerText = "Weitere Informationen für die Nutzung."
             document.getElementById("keyDisplay").innerText = "Code für " + duration + ": " + data.key;
             const qrCodeDisplay = document.getElementById("qrCodeDisplay");
             qrCodeDisplay.src = "data:image/png;base64," + data.qr_code;
